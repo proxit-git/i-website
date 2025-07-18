@@ -755,6 +755,7 @@ function App() {
                       placeholder="example@email.com"
                       dir="ltr"
                       required
+                      required
                     />
                   </div>
                   
@@ -764,6 +765,7 @@ function App() {
                       type="password"
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm hover:border-gray-300 focus:bg-white"
                       placeholder="رمز عبور خود را وارد کنید"
+                      required
                       required
                     />
                   </div>
@@ -786,27 +788,17 @@ function App() {
                   <div className="relative">
                     <div className="absolute inset-0 flex items-center">
                       <div className="w-full border-t border-gray-300"></div>
-                    </div>
-                    <div className="relative flex justify-center text-sm">
-                      <span className="px-2 bg-white text-gray-500">یا</span>
-                    </div>
-                  </div>
-                  
-                  <button
-                    type="button"
-                    className="w-full bg-white border-2 border-gray-200 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-all transform hover:scale-105 shadow-sm hover:shadow-md"
-                  >
-                    ورود با گوگل
-                  </button>
-                </form>
+        </>
+      )}
+      
+      {/* Login Page */}
+      {currentPage === 'login' && (
         <LoginPage onNavigate={setCurrentPage} />
       )}
       
       {/* Signup Page */}
       {currentPage === 'signup' && (
         <SignupPage onNavigate={setCurrentPage} />
-      )}
-        </>
       )}
     </div>
   );

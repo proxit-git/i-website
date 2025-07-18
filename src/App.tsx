@@ -731,16 +731,16 @@ function App() {
       
       {/* Login Page */}
       {currentPage === 'login' && (
-        <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div className="min-h-screen flex items-center justify-center relative overflow-hidden py-8">
           <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-red-100 animate-gradient"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-md mx-auto">
-              <div className="backdrop-blur-xl bg-white/95 rounded-3xl p-8 border border-white/60 shadow-3xl">
+              <div className="backdrop-blur-xl bg-white/95 rounded-3xl p-8 border border-white/60 shadow-3xl hover:shadow-2xl transition-all duration-300">
                 <div className="text-center mb-8">
                   <img 
                     src="https://raw.githubusercontent.com/proxit-git/website/main/logo.png" 
                     alt="قهرمانان زندگی" 
-                    className="h-16 w-auto mx-auto mb-4"
+                    className="h-16 w-auto mx-auto mb-4 hover:scale-105 transition-transform duration-300"
                   />
                   <h2 className="text-3xl font-bold text-gray-900 mb-2">ورود به حساب</h2>
                   <p className="text-gray-600">به خانواده قهرمانان زندگی بپیوندید</p>
@@ -751,9 +751,10 @@ function App() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">ایمیل</label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm hover:border-gray-300 focus:bg-white"
                       placeholder="example@email.com"
                       dir="ltr"
+                      required
                     />
                   </div>
                   
@@ -761,17 +762,18 @@ function App() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">رمز عبور</label>
                     <input
                       type="password"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm hover:border-gray-300 focus:bg-white"
                       placeholder="رمز عبور خود را وارد کنید"
+                      required
                     />
                   </div>
                   
                   <div className="flex items-center justify-between">
                     <label className="flex items-center">
-                      <input type="checkbox" className="rounded border-gray-300 text-red-600 focus:ring-red-500 w-4 h-4" />
+                      <input type="checkbox" className="rounded border-gray-300 text-red-600 focus:ring-red-500 w-4 h-4 transition-colors" />
                       <span className="mr-2 text-sm text-gray-600">مرا به خاطر بسپار</span>
                     </label>
-                    <button type="button" className="text-sm text-red-600 hover:text-red-700">فراموشی رمز عبور؟</button>
+                    <button type="button" className="text-sm text-red-600 hover:text-red-700 transition-colors hover:underline">فراموشی رمز عبور؟</button>
                   </div>
                   
                   <button
@@ -797,170 +799,12 @@ function App() {
                     ورود با گوگل
                   </button>
                 </form>
-                
-                <div className="mt-6 text-center">
-                  <p className="text-gray-600">
-                    حساب کاربری ندارید؟{' '}
-                    <button 
-                      onClick={() => setCurrentPage('signup')}
-                      className="text-red-600 hover:text-red-700 font-medium transition-colors"
-                    >
-                      ثبت نام کنید
-                    </button>
-                  </p>
-                </div>
-                
-                <div className="mt-6">
-                  <button
-                    onClick={() => setCurrentPage('home')}
-                    className="w-full text-gray-600 hover:text-gray-800 py-2 font-medium transition-colors flex items-center justify-center"
-                  >
-                    <ArrowLeft size={16} className="ml-2" />
-                    بازگشت به صفحه اصلی
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <LoginPage onNavigate={setCurrentPage} />
       )}
       
       {/* Signup Page */}
       {currentPage === 'signup' && (
-        <div className="min-h-screen flex items-center justify-center relative overflow-hidden py-8">
-          <div className="absolute inset-0 bg-gradient-to-bl from-red-50 via-white to-red-100 animate-gradient-reverse"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-md mx-auto">
-              <div className="backdrop-blur-xl bg-white/95 rounded-3xl p-8 border border-white/60 shadow-3xl">
-                <div className="text-center mb-8">
-                  <img 
-                    src="https://raw.githubusercontent.com/proxit-git/website/main/logo.png" 
-                    alt="قهرمانان زندگی" 
-                    className="h-16 w-auto mx-auto mb-4"
-                  />
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">ثبت نام</h2>
-                  <p className="text-gray-600">عضو خانواده قهرمانان زندگی شوید</p>
-                </div>
-                
-                <form className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">نام و نام خانوادگی</label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm"
-                      placeholder="نام کامل خود را وارد کنید"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">ایمیل</label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm"
-                      placeholder="example@email.com"
-                      dir="ltr"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">شماره تماس</label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm"
-                      placeholder="09123456789"
-                      dir="ltr"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">رشته تحصیلی / شغل</label>
-                    <select className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm">
-                      <option value="">انتخاب کنید</option>
-                      <option value="student">دانشجو</option>
-                      <option value="engineer">مهندس</option>
-                      <option value="doctor">پزشک</option>
-                      <option value="teacher">معلم</option>
-                      <option value="entrepreneur">کارآفرین</option>
-                      <option value="other">سایر</option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">رمز عبور</label>
-                    <input
-                      type="password"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm"
-                      placeholder="رمز عبور قوی انتخاب کنید"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">تکرار رمز عبور</label>
-                    <input
-                      type="password"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all bg-white/80 backdrop-blur-sm"
-                      placeholder="رمز عبور را مجدداً وارد کنید"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="flex items-start">
-                      <input type="checkbox" className="rounded border-gray-300 text-red-600 focus:ring-red-500 mt-1 w-4 h-4" />
-                      <span className="mr-2 text-sm text-gray-600 leading-relaxed">
-                        با قوانین و مقررات سایت موافقم و شرایط استفاده از خدمات را می‌پذیرم
-                      </span>
-                    </label>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-xl font-semibold hover:from-red-700 hover:to-red-800 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    ثبت نام
-                  </button>
-                  
-                  <div className="relative">
-                    <div className="absolute inset-0 flex items-center">
-                      <div className="w-full border-t border-gray-300"></div>
-                    </div>
-                    <div className="relative flex justify-center text-sm">
-                      <span className="px-2 bg-white text-gray-500">یا</span>
-                    </div>
-                  </div>
-                  
-                  <button
-                    type="button"
-                    className="w-full bg-white border-2 border-gray-200 text-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-all transform hover:scale-105 shadow-sm hover:shadow-md"
-                  >
-                    ثبت نام با گوگل
-                  </button>
-                </form>
-                
-                <div className="mt-6 text-center">
-                  <p className="text-gray-600">
-                    قبلاً ثبت نام کرده‌اید؟{' '}
-                    <button 
-                      onClick={() => setCurrentPage('login')}
-                      className="text-red-600 hover:text-red-700 font-medium transition-colors"
-                    >
-                      وارد شوید
-                    </button>
-                  </p>
-                </div>
-                
-                <div className="mt-6">
-                  <button
-                    onClick={() => setCurrentPage('home')}
-                    className="w-full text-gray-600 hover:text-gray-800 py-2 font-medium transition-colors flex items-center justify-center"
-                  >
-                    <ArrowLeft size={16} className="ml-2" />
-                    بازگشت به صفحه اصلی
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <SignupPage onNavigate={setCurrentPage} />
       )}
         </>
       )}

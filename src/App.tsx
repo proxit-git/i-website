@@ -261,7 +261,7 @@ function App() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="backdrop-blur-xl bg-white/95 rounded-3xl p-8 md:p-12 border border-white/60 shadow-3xl">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
-                خوش آمدید به <span className="text-red-600">قهرمانان زندگی</span>
+                خوش آمدید به <span className="text-red-600">قهرمانان زندگی بخش</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
                 آینده‌ای روشن، امروز آغاز می‌شود. ما تیمی از قهرمانان هستیم که برای ساخت دنیای بهتر تلاش می‌کنیم.
@@ -367,7 +367,7 @@ function App() {
                   </div>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  معرفی پروژه قهرمانان زندگی در رویداد هکاتون مشهد و ارائه راه‌حل‌های نوآورانه برای چالش‌های اجتماعی
+                  معرفی پروژه قهرمانان زندگی بخش در رویداد هکاتون مشهد و ارائه راه‌حل‌های نوآورانه برای چالش‌های اجتماعی
                 </p>
                 <button className="w-full bg-red-600 text-white py-3 rounded-full font-semibold hover:bg-red-700 transition-colors">
                   اطلاعات بیشتر
@@ -413,7 +413,7 @@ function App() {
             <div className="text-center mb-16">
               <div className="backdrop-blur-xl bg-white/90 rounded-3xl p-6 border border-white/50 shadow-3xl max-w-4xl mx-auto">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  برنامه‌ریزی دقیق و مرحله‌ای برای رسیدن به اهداف بلندمدت تیم قهرمانان زندگی. 
+                   برنامه‌ریزی دقیق و مرحله‌ای برای رسیدن به اهداف بلندمدت تیم قهرمانان زندگی بخش. 
                   هر فاز شامل اهداف مشخص، فعالیت‌های کلیدی و شاخص‌های موفقیت است.
                 </p>
               </div>

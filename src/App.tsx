@@ -121,7 +121,7 @@ function App() {
                 className="h-12 w-auto object-contain"
               />
               <div>
-                <h1 className="text-xl font-bold text-red-600">قهرمانان زندگی</h1>
+                <h1 className="text-xl font-bold text-red-600">قهرمانان زندگی بخش</h1>
                 <p className="text-sm text-gray-600">آینده‌ای روشن، امروز آغاز می‌شود</p>
               </div>
             </div>
@@ -714,7 +714,7 @@ function App() {
                   </div>
                   <div className="flex items-center text-gray-300">
                     <MapPin size={16} className="ml-3" />
-                    <span>مشهد، دانشگاه علوم پزشکی مشهد، ساختمان خوارزمی، دانشکده پرستاری و مامایی</span>
+                    <span>مشهد، دانشگاه علوم پزشکی یمشهد، ساختمان خوارزمی، دانشکده پرستاری و مامایی</span>
                   </div>
                 </div>
               </div>

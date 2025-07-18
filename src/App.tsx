@@ -666,11 +666,11 @@ function App() {
                 <div className="flex items-center mb-6">
                   <img 
                     src="https://raw.githubusercontent.com/proxit-git/website/main/logo.png" 
-                    alt="قهرمانان زندگی" 
+                    alt="قهرمانان زندگی بخش" 
                     className="h-12 w-auto ml-4"
                   />
                   <div>
-                    <h3 className="text-2xl font-bold">قهرمانان زندگی</h3>
+                    <h3 className="text-2xl font-bold">قهرمانان زندگی بخش</h3>
                     <p className="text-gray-300">آینده‌ای روشن، امروز آغاز می‌شود</p>
                   </div>
                 </div>
@@ -722,7 +722,7 @@ function App() {
 
             <div className="border-t border-gray-800 mt-12 pt-8 text-center">
               <p className="text-gray-400">
-                © 1404 قهرمانان زندگی. تمام حقوق محفوظ است.
+                © 1404 قهرمانان زندگی بخش. تمام حقوق محفوظ است.
               </p>
             </div>
           </div>
@@ -739,7 +739,7 @@ function App() {
                 <div className="text-center mb-8">
                   <img 
                     src="https://raw.githubusercontent.com/proxit-git/website/main/logo.png" 
-                    alt="قهرمانان زندگی" 
+                    alt="قهرمانان زندگی بخش" 
                     className="h-16 w-auto mx-auto mb-4 hover:scale-105 transition-transform duration-300"
                   />
                   <h2 className="text-3xl font-bold text-gray-900 mb-2">ورود به حساب</h2>
